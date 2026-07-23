@@ -2,7 +2,7 @@ extends Control
 ## Setup screen for the Memory game: pick a difficulty, then pick an image set.
 ## Selecting an image set starts the game with the chosen difficulty.
 
-const GameIcon := preload("res://scenes/game_icon.tscn")
+const GameIcon := preload("res://scenes/menus/game_icon.tscn")
 
 ## Available image sets. `dir` points at the folder of card images; `preview`
 ## is the icon shown for the set on this screen.
@@ -62,11 +62,11 @@ func _on_set_selected(image_set: Dictionary) -> void:
 	MemorySettings.difficulty = _difficulty.selected_difficulty
 	MemorySettings.image_dir = image_set["dir"]
 	MemorySettings.set_name = image_set["name"]
-	get_tree().change_scene_to_file("res://scenes/memory_game.tscn")
+	get_tree().change_scene_to_file("res://scenes/memory/memory_game.tscn")
 
 
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/game_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/menus/game_select.tscn")
 
 
 func _unhandled_input(event: InputEvent) -> void:

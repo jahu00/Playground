@@ -2,8 +2,8 @@ extends Control
 ## The Memory game. Builds a grid of card pairs from the chosen image set and
 ## difficulty, then handles flipping, matching, and win detection.
 
-const MemoryCard := preload("res://scenes/memory_card.tscn")
-const SplashOverlay := preload("res://scenes/splash_overlay.tscn")
+const MemoryCard := preload("res://scenes/memory/memory_card.tscn")
+const SplashOverlay := preload("res://scenes/common/splash_overlay.tscn")
 const WIN_SPLASH := preload("res://assets/win-splash.png")
 
 ## Column counts chosen to keep the board roughly rectangular per difficulty.
@@ -189,7 +189,7 @@ func _on_win_dismissed(splash: Control) -> void:
 
 
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/memory_setup.tscn")
+	get_tree().change_scene_to_file("res://scenes/memory/memory_setup.tscn")
 
 
 func _unhandled_input(event: InputEvent) -> void:

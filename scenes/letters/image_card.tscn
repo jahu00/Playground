@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scenes/image_card.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/letters/image_card.gd" id="1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_img"]
 bg_color = Color(1, 1, 1, 1)

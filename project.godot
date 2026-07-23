@@ -12,15 +12,15 @@ config_version=5
 
 config/name="Playground"
 config/description="A collection of minigames."
-run/main_scene="res://scenes/title_screen.tscn"
+run/main_scene="res://scenes/menus/title_screen.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Localization="*res://scenes/localization.gd"
-MemorySettings="*res://scenes/memory_settings.gd"
-LettersSettings="*res://scenes/letters_settings.gd"
+Localization="*res://scenes/common/localization.gd"
+MemorySettings="*res://scenes/memory/memory_settings.gd"
+LettersSettings="*res://scenes/letters/letters_settings.gd"
 
 [display]
 

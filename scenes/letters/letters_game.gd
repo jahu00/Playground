@@ -5,10 +5,10 @@ extends Control
 ## outline green; wrong ones flash red and bounce back. Match them all to win;
 ## clicking the win splash starts a fresh round with new random images.
 
-const ImageCard := preload("res://scenes/image_card.tscn")
-const LetterCard := preload("res://scenes/letter_card.tscn")
-const DropSlot := preload("res://scenes/drop_slot.tscn")
-const SplashOverlay := preload("res://scenes/splash_overlay.tscn")
+const ImageCard := preload("res://scenes/letters/image_card.tscn")
+const LetterCard := preload("res://scenes/letters/letter_card.tscn")
+const DropSlot := preload("res://scenes/letters/drop_slot.tscn")
+const SplashOverlay := preload("res://scenes/common/splash_overlay.tscn")
 const WIN_SPLASH := preload("res://assets/win-splash.png")
 
 const CARD_SEPARATION := 24.0
@@ -219,7 +219,7 @@ func _center_board() -> void:
 
 
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/letters_setup.tscn")
+	get_tree().change_scene_to_file("res://scenes/letters/letters_setup.tscn")
 
 
 func _unhandled_input(event: InputEvent) -> void:

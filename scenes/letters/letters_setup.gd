@@ -2,7 +2,7 @@ extends Control
 ## Setup screen for the Letters game: pick a difficulty (4/5/6 images), then
 ## pick an image set. Selecting a set starts the game.
 
-const GameIcon := preload("res://scenes/game_icon.tscn")
+const GameIcon := preload("res://scenes/menus/game_icon.tscn")
 
 ## Available image sets. `dir` points at the folder of images; `set_key` is the
 ## localization key for the set name; `preview` is the icon shown here.
@@ -80,11 +80,11 @@ func _on_set_selected(image_set: Dictionary) -> void:
 	LettersSettings.difficulty = _difficulty.selected_difficulty
 	LettersSettings.image_dir = image_set["dir"]
 	LettersSettings.set_key = image_set["set_key"]
-	get_tree().change_scene_to_file("res://scenes/letters_game.tscn")
+	get_tree().change_scene_to_file("res://scenes/letters/letters_game.tscn")
 
 
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/game_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/menus/game_select.tscn")
 
 
 func _unhandled_input(event: InputEvent) -> void:

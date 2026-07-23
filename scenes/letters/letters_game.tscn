@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scenes/letters_game.gd" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/animated_background.tscn" id="2"]
+[ext_resource type="Script" path="res://scenes/letters/letters_game.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/common/animated_background.tscn" id="2"]
 
 [node name="LettersGame" type="Control"]
 layout_mode = 3

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scenes/letters_setup.gd" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/animated_background.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/difficulty_selector.tscn" id="3"]
+[ext_resource type="Script" path="res://scenes/letters/letters_setup.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/common/animated_background.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/common/difficulty_selector.tscn" id="3"]
 
 [node name="LettersSetup" type="Control"]
 layout_mode = 3

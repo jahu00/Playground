@@ -2,7 +2,7 @@ extends Control
 ## Grid view for choosing a minigame to play. Also lets the player switch
 ## language via emoji-flag buttons.
 
-const GameIcon := preload("res://scenes/game_icon.tscn")
+const GameIcon := preload("res://scenes/menus/game_icon.tscn")
 
 ## Each entry describes a game tile shown in the grid.
 ## `name_key` is a localization key; `scene` is left empty for games that
@@ -12,13 +12,13 @@ const GAMES: Array[Dictionary] = [
 		"name_key": "memory",
 		"icon": "res://assets/games/memory.png",
 		"background_color": Color(0.4, 0.7, 1.0),
-		"scene": "res://scenes/memory_setup.tscn",
+		"scene": "res://scenes/memory/memory_setup.tscn",
 	},
 	{
 		"name_key": "letters",
 		"icon": "res://assets/games/letters.png",
 		"background_color": Color(0.9, 0.6, 1.0),
-		"scene": "res://scenes/letters_setup.tscn",
+		"scene": "res://scenes/letters/letters_setup.tscn",
 	},
 ]
 
@@ -134,7 +134,7 @@ func _on_game_pressed(game: Dictionary) -> void:
 
 
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/menus/title_screen.tscn")
 
 
 func _unhandled_input(event: InputEvent) -> void:

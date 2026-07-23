@@ -5,7 +5,7 @@ extends VBoxContainer
 
 signal difficulty_changed(difficulty: int)
 
-const DifficultyOption := preload("res://scenes/difficulty_option.tscn")
+const DifficultyOption := preload("res://scenes/common/difficulty_option.tscn")
 
 ## Number of difficulty levels to offer.
 @export var levels: int = 3:

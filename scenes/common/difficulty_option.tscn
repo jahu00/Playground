@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://scenes/difficulty_option.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/common/difficulty_option.gd" id="1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
 bg_color = Color(0, 0, 0, 0.25)

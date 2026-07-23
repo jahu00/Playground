@@ -1,10 +1,7 @@
-[gd_scene format=3 uid="uid://b2ehaj6al2xjq"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://scenes/game_icon.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://cbyh1ycnp31au" path="res://assets/icon-background.png" id="2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_empty"]
-bg_color = Color(0, 0, 0, 0)
+[ext_resource type="Script" path="res://scenes/menus/game_icon.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/icon-background.png" id="2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_border"]
 bg_color = Color(0, 0, 0, 0)
@@ -18,16 +15,19 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[node name="GameIcon" type="Button" unique_id=891027464]
-clip_contents = true
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_empty"]
+bg_color = Color(0, 0, 0, 0)
+
+[node name="GameIcon" type="Button"]
 custom_minimum_size = Vector2(180, 180)
+clip_contents = true
 theme_override_styles/normal = SubResource("StyleBoxFlat_empty")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_empty")
 theme_override_styles/hover = SubResource("StyleBoxFlat_empty")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_empty")
 theme_override_styles/focus = SubResource("StyleBoxFlat_border")
 script = ExtResource("1")
 
-[node name="Background" type="TextureRect" parent="." unique_id=113585821]
+[node name="Background" type="TextureRect" parent="."]
 unique_name_in_owner = true
 show_behind_parent = true
 layout_mode = 1
@@ -41,7 +41,7 @@ texture = ExtResource("2")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Icon" type="TextureRect" parent="." unique_id=1406733061]
+[node name="Icon" type="TextureRect" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -57,7 +57,7 @@ mouse_filter = 2
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Border" type="Panel" parent="." unique_id=704296401]
+[node name="Border" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
